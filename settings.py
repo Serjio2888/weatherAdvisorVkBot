@@ -2,7 +2,7 @@ import vk_api
 from vk_api.longpoll import VkLongPoll
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
 import logging
-from weatherAdvisorVkBot.credentials import vk_token
+from credentials import vk_token
 
 
 def logger_init():

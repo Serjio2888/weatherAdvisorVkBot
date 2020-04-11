@@ -1,4 +1,4 @@
-from weatherAdvisorVkBot.settings import vk_init
+from settings import vk_init
 
 _, _vk, _ = vk_init()
 

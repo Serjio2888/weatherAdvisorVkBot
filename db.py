@@ -1,5 +1,5 @@
 import psycopg2
-from weatherAdvisorVkBot.credentials import host, port, db_pass, db_name, username
+from credentials import host, port, db_pass, db_name, username
 
 
 def connect():

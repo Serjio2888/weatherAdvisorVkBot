@@ -1,5 +1,6 @@
 from random import choice
-from weatherAdvisorVkBot.constants import answers, greetings, endings
+
+from constants import answers, greetings, endings
 
 
 def do_pogoda_advise(pogoda):

@@ -1,9 +1,11 @@
 from random import randint
 from time import sleep
 from datetime import datetime
-from weatherAdvisorVkBot import delivery, settings
 import pytz
-from weatherAdvisorVkBot.constants import statuses as status
+
+import delivery
+import settings
+from constants import statuses as status
 
 
 class Cron:

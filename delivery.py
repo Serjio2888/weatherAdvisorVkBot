@@ -1,5 +1,8 @@
-from weatherAdvisorVkBot import db, api, vk_api_worker, utils
-from weatherAdvisorVkBot.constants import answers
+import api
+import db
+import vk_api_worker
+import utils
+from constants import answers
 
 
 # for WeatherAdvisor

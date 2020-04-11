@@ -1,10 +1,11 @@
-from vk_api.longpoll import VkEventType
 from random import randint
-from weatherAdvisorVkBot import delivery, settings
-from weatherAdvisorVkBot.constants import statuses as status
-
-from weatherAdvisorVkBot.crontab import Cron
 import multiprocessing
+from vk_api.longpoll import VkEventType
+
+import delivery
+import settings
+from constants import statuses as status
+from crontab import Cron
 
 
 class WeatherAdvisorMain:
@@ -53,9 +54,7 @@ if __name__ == "__main__":
     cron = Cron(logging.getLogger("notify"))
     cron = multiprocessing.Process(target=cron.run, args=())
     cron.start()
-    print("notifications started")
 
     wa = WeatherAdvisorMain(logging.getLogger("main"))
     wa = multiprocessing.Process(target=wa.run, args=())
     wa.start()
-    print("main advisor started")
