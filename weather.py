@@ -22,6 +22,8 @@ class WeatherAdvisorMain:
             answer = delivery.town(message, uid)
         elif message.startswith("уведомление"):
             answer = delivery.add_notification(message, uid)
+        elif message.startswith("фильм"):
+            answer = delivery.get_film(message, uid)
         elif message.startswith("/start") or 'старт' in message:
             answer = delivery.begin()
         else:

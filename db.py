@@ -72,3 +72,12 @@ def get_users_by_time(now):
     conn.close()
     return users, flag
 
+
+def get_film_by_weather(weather):
+    conn = connect()
+    cursor = conn.cursor()
+    cursor.execute("Select film from film_weather where weather=%s order by random() limit 1", (weather,))
+    record = cursor.fetchone()
+    cursor.close()
+    conn.close()
+    return record[0]

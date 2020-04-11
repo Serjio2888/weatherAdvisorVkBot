@@ -85,6 +85,20 @@ def advise(message, uid):
             "status": 200}
 
 
+def get_film(message, uid):
+    result, ok = db.get_user_info(uid)
+    if not ok:
+        return {"answer": "",
+                "status": 50}
+    city = result[2]
+    _, ok, pogoda = api.weather(city)
+    if not ok:
+        return {"answer": "",
+                "status": 11}
+    return {"answer": answers[50]+utils.do_film_advise(pogoda),
+            "status": 200}
+
+
 def default():
     return {"answer": answers[20],
             "status": 200}
