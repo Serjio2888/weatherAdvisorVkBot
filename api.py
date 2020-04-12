@@ -14,9 +14,9 @@ def weather(city):
     data = res.json()
     if data['cod'] == 200:
         sunset = datetime.fromtimestamp(data["sys"]["sunset"])
-        sunset = str(sunset.hour)+":"+str(sunset.minute)
+        sunset = str(sunset.hour+3)+":"+str(sunset.minute)
         sunrise = datetime.fromtimestamp(data["sys"]["sunrise"])
-        sunrise = str(sunrise.hour) + ":" + str(sunrise.minute)
+        sunrise = str(sunrise.hour+3) + ":" + str(sunrise.minute)
         pogoda = data["weather"][0]["description"]
         msg = "Погода в городе " + city.capitalize() + ':\n\n'
         msg += pogoda + '\n'
