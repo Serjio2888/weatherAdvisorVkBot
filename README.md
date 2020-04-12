@@ -20,7 +20,9 @@ chat-bot for vk: tells weather forecast and sends notifications
 Рассвет: Время. Закат: Время
 ```
 
-* __Демонстрация работы:__ (вставить ссылку)
+* __Демонстрация работы:__ https://www.loom.com/share/07bb160dded24ec1a0303d7576531826
+
+* __Ссылка на группу с ботом__: https://vk.com/weatheradvisor
 
 * __Что бот вообще умеет:__
 
